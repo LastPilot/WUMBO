@@ -1,0 +1,29 @@
+body {
+	background: gold;
+	margin: 0px;
+	padding: 0px;
+}
+
+.admin_info {
+	background: white;
+	width: 70%;
+	text-align: center;
+	margin: 10% 10%;
+	padding: 20px 0px 100px 0px;
+}
+
+img {
+	width: 50%;
+}
+
+.header_logo {
+	padding: 0px;
+}
+
+.img_logo {
+	width: 25%;
+}
+
+h3 {
+	font-family: "Times New Roman";
+}
