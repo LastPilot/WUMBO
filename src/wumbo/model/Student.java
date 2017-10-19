@@ -56,4 +56,8 @@ public class Student {
 	}
 	
 	
+<<<<<<< HEAD
  }
+=======
+ }
+>>>>>>> origin/roi-organize
