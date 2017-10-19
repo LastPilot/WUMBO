@@ -7,7 +7,7 @@
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	crossorigin="anonymous">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>${name.getName()}Page</title>
+<title>${student.name} Page</title>
 </head>
 <body style='background-color: WHITE; padding: 20px;'>
 	<font style='color: BLACK; font-family: georgia;'>
@@ -58,23 +58,23 @@
 								<div class="profile-usertitle-name">
 									<h1>
 										Welcome <br>
-										<c:out value="${name.getName()}"></c:out>
+										<c:out value="${student.name}"></c:out>
 									</h1>
 									<br>
 								</div>
 								<h4>
 									Email:
-									<c:out value="${name.getEmail()}"></c:out>
+									<c:out value="${student.email}"></c:out>
 								</h4>
 								<br>
 								<h4>
 									CIN:
-									<c:out value="${name.getCIN()}"></c:out>
+									<c:out value="${student.cin}"></c:out>
 								</h4>
 								<br>
 								<h4>
 									GPA:
-									<c:out value="${name.getGPA()}"></c:out>
+							
 								</h4>
 
 							</div>

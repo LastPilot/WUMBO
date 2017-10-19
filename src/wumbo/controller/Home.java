@@ -2,6 +2,9 @@ package wumbo.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 //import org.apache.common.fileupload.fileItem;
 
@@ -21,6 +24,7 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 import sun.rmi.log.LogOutputStream;
+import wumbo.model.Student;
 
 @WebServlet("/Home")
 public class Home extends HttpServlet {
@@ -38,8 +42,12 @@ public class Home extends HttpServlet {
 		String password = request.getParameter("password");
 		Student name = (Student) request.getSession().getAttribute("user");
 		
+		HttpSession session = request.getSession();
+		Student  student = new Student("bob", "bob1", "bob@yahoo.com", 1234, "bread"); 
+		session.setAttribute("student", student);
+		
 		request.setAttribute("name", name);
-		request.getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/Home.jsp").forward(request, response);
 		
 	}
 
@@ -56,6 +64,26 @@ public class Home extends HttpServlet {
 //			
 //		}
 		
+		
+		Connection c = null;
+		try {
+			String url = "jdbc:mysql://localhost/cs3337stu04?useSSL=false";
+			String username = "cs3337stu04";
+			String password = "f9k.cwxn";
+			c = DriverManager.getConnection(url, username, password);
+			//getting info for student
+			String sql = "Select * From students";
+			
+		} catch (SQLException e) {
+			throw new ServletException(e);
+		} finally {
+			try {
+				if (c != null)
+					c.close();
+			} catch (SQLException e) {
+				throw new ServletException(e);
+			}
+		}
 		
 		doGet(request, response);
 		
