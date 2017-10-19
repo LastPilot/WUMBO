@@ -55,9 +55,4 @@ public class Student {
 		this.password = password;
 	}
 	
-	
-<<<<<<< HEAD
- }
-=======
- }
->>>>>>> origin/roi-organize
+}
