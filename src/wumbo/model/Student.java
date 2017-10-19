@@ -7,7 +7,8 @@ public class Student {
 	String username;
 	String password;
 	
-	public Student(String username, String email, int cin, String password) {
+	public Student(String name, String username, String email, int cin, String password) {
+		this.name = name;
 		this.username = username;
 		this.email = email;
 		this.cin = cin;

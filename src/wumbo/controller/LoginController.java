@@ -54,8 +54,8 @@ public class LoginController extends HttpServlet {
 			ResultSet rs = p.executeQuery();
 
 			if (rs.next()) {
-				Student currentUser = new Student(rs.getString("username"), rs.getString("email"), rs.getInt("cin"),
-						rs.getString("password"));
+				Student currentUser = new Student(rs.getString("student_name"), rs.getString("username"), rs.getString("email"),
+						rs.getInt("cin"), rs.getString("password"));
 				HttpSession session = request.getSession();
 				session.setAttribute("user", currentUser);
 				isStudent = true;
