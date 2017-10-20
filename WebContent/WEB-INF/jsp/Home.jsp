@@ -3,11 +3,10 @@
 <html>
 <head>
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>${student.name} Page</title>
+<link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
+<title>Home</title>
 </head>
 <body style='background-color: WHITE; padding: 20px;'>
 	<font style='color: BLACK; font-family: georgia;'>
@@ -31,7 +30,7 @@
 						class="navbar-brand" href="../cs3337/Setting">Setting</a>
 				</div>
 				<div class="logout" class="profile-userbuttons" align="Right"
-					; style='padding: 10px;'>
+					 style='padding: 10px;'>
 					<form action="Logout" method="post">
 						<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
 					</form>
@@ -58,18 +57,18 @@
 								<div class="profile-usertitle-name">
 									<h1>
 										Welcome <br>
-										<c:out value="${student.name}"></c:out>
+										<c:out value="${user.name}"></c:out>
 									</h1>
 									<br>
 								</div>
 								<h4>
 									Email:
-									<c:out value="${student.email}"></c:out>
+									<c:out value="${user.email}"></c:out>
 								</h4>
 								<br>
 								<h4>
 									CIN:
-									<c:out value="${student.cin}"></c:out>
+									<c:out value="${user.cin}"></c:out>
 								</h4>
 								<br>
 								<h4>

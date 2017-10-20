@@ -61,6 +61,18 @@
 								style="color: #FF0004;"></span> <span id="availableUser"></span>
 						</div>
 					</div>
+					
+					<div class="form-group">
+						<label for="studentName" class="cols-sm-2 control-label">Name</label>
+						<div class="cols-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-users fa"
+									aria-hidden="true"></i></span> <input type="text" class="form-control"
+									name="studentName" id="studentName" placeholder="Enter your Name"
+									required />
+							</div>
+						</div>
+					</div>
 
 					<div class="form-group">
 						<label for="email" class="cols-sm-2 control-label">Your
@@ -72,6 +84,13 @@
 									type="text" class="form-control" name="email" id="email"
 									placeholder="Enter your Email" required />
 							</div>
+						</div>
+					</div>
+					
+					<div class="row" id="emailmatching" style="display: none;">
+						<div class="col-sm-12">
+							<span id="emailmatch" class="glyphicon glyphicon-remove"
+								style="color: #FF0004;"></span> Email is not linked to the CIN
 						</div>
 					</div>
 

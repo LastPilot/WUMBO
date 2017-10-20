@@ -1,9 +1,11 @@
 package wumbo.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.ServletConfig;
@@ -39,6 +41,7 @@ public class RegisterController extends HttpServlet {
 			throws ServletException, IOException {
 		// get info from registration page
 		String user = request.getParameter("username");
+		String name = request.getParameter("studentName");
 		String email = request.getParameter("email");
 		int cin = Integer.parseInt(request.getParameter("cin"));
 		String pass = request.getParameter("password");
@@ -51,21 +54,41 @@ public class RegisterController extends HttpServlet {
 			String username = "cs3337stu04";
 			String password = "f9k.cwxn";
 			c = DriverManager.getConnection(url, username, password);
+			
+			// Check if user entered email is connected to the email in the cin table
+			String validate = "select email from cins where email = ?";
+			PreparedStatement ps01 = c.prepareStatement(validate);
+			ps01.setString(1, email);
+			ResultSet rs = ps01.executeQuery();
+			
+			if (!rs.next()) {
+				response.setContentType("text/html");
+				PrintWriter out = response.getWriter();
+
+				out.println("<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>");
+				out.println("<script>");
+				out.println("$(function() {$('#emailmatching').show();});");
+				out.println("</script>");
+
+				request.getRequestDispatcher("/WEB-INF/jsp/Register.jsp").include(request, response);
+				return;
+			}
 
 			// create student
-			String insert = "insert into students (username, email, cin, password) values (?, ?, ?, ?)";
-			PreparedStatement ps01 = c.prepareStatement(insert);
-			ps01.setString(1, user);
-			ps01.setString(2, email);
-			ps01.setInt(3, cin);
-			ps01.setString(4, pass);
-			ps01.executeUpdate();
+			String insert = "insert into students (username, name, email, cin, password) values (?, ?, ?, ?, ?)";
+			PreparedStatement ps02 = c.prepareStatement(insert);
+			ps02.setString(1, user);
+			ps02.setString(2, name);
+			ps02.setString(3, email);
+			ps02.setInt(4, cin);
+			ps02.setString(5, pass);
+			ps02.executeUpdate();
 
 			// update cin to used so it cannot be used by a new user
 			String used = "update cins set is_used = true where cin = ?";
-			PreparedStatement ps02 = c.prepareStatement(used);
-			ps02.setInt(1, cin);
-			ps02.executeUpdate();
+			PreparedStatement ps03 = c.prepareStatement(used);
+			ps03.setInt(1, cin);
+			ps03.executeUpdate();
 
 		} catch (SQLException e) {
 			throw new ServletException(e);

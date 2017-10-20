@@ -79,7 +79,7 @@
 							class="btn btn-primary btn-lg btn-block login-button">Login</button>
 					</div>
 					<div class="login-register">
-						<a href="Register">Go Back</a>
+						<a href="Register">Register for a new account</a>
 					</div>
 				</form>
 			</div>
