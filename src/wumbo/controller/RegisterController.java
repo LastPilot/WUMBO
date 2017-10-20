@@ -75,7 +75,7 @@ public class RegisterController extends HttpServlet {
 			}
 
 			// create student
-			String insert = "insert into students (username, name, email, cin, password) values (?, ?, ?, ?, ?)";
+			String insert = "insert into students (username, student_name, email, cin, password) values (?, ?, ?, ?, ?)";
 			PreparedStatement ps02 = c.prepareStatement(insert);
 			ps02.setString(1, user);
 			ps02.setString(2, name);
