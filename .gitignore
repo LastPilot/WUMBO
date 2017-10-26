@@ -19,11 +19,6 @@
 !docs/
 !docs/**
 
-<<<<<<< HEAD
 # do not ignore sql and everything within
 !sql/
 !sql/**
-=======
-!sql/
-!sql/**
->>>>>>> origin/kristen-organize
