@@ -29,7 +29,8 @@
 						
 					</button>
 					 <a class="navbar-brand" href="Home">Home</a> <a
-						class="navbar-brand" href="#">Courses</a> 
+						class="navbar-brand" href="Courses">Courses</a>
+						<a class="navbar-brand" href="RoadMap">Road Map</a> 
 				</div>
 				
 				<!-- Logout Button -->
@@ -46,7 +47,7 @@
 				<div class="row profile">
 					<div class="col-md-3">
 						<div class="profile-sidebar">
-							<img class="profile" src=<c:url value="/WEB-INF/ProfilePics/${user.cin}.jpg" />> <br>
+							<img class="profile" src=<c:url value="/ProfilePics/${user.cin}.jpg" />> <br>
 							<br>
 							<br>
 							<br>
