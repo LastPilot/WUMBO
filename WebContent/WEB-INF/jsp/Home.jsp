@@ -2,57 +2,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<c:url value="/css/Home.css"/>" />
+	
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
-<title>Home</title>
+<title>${user.name} Home</title>
 </head>
-<body style='background-color: WHITE; padding: 20px;'>
-	<font style='color: BLACK; font-family: georgia;'>
-		<div  class= "goldBackground" style='padding: 20px; background-color: GOLD;'>
-			<a href="http://www.calstatela.edu/"> <img
-				src="http://www.calstatela.edu/sites/default/files/groups/Mind%20Matters/brand_logo_homepage.png"
-				style='width: 300px;' /> <br> <br>
+<body>
+	
+		<div class= "goldBackground">
+		
+		<!-- Top Right Logo -->
+			<a href="http://www.calstatela.edu/"> 
+			<img src="http://www.calstatela.edu/sites/default/files/groups/Mind%20Matters/brand_logo_homepage.png" style='width: 300px;' /> <br> <br>
 			</a>
-			<nav class="navbar navbar-inverse navbar-static-top marginBottom-0"
-				role="navigation">
+			
+			<!--nav bar-->
+			<nav class="navbar navbar-inverse navbar-static-top marginBottom-0" role="navigation">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle"
 						data-target="#navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span> <span
-							class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
+						<span class="sr-only">Toggle navigation</span> 
+						
 					</button>
 					 <a class="navbar-brand" href="Home">Home</a> <a
-						class="navbar-brand" href="#">Courses</a> <a
-						class="navbar-brand" href="Help">Help</a> <a
-						class="navbar-brand" href="Settings">Setting</a>
+						class="navbar-brand" href="#">Courses</a> 
 				</div>
-				<div class="logout" class="profile-userbuttons" align="Right"
-					 style='padding: 10px;'>
+				
+				<!-- Logout Button -->
+				<div class="logout" class="profile-userbuttons">
 					<form action="Logout" method="post">
 						<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
 					</form>
 
 				</div>
 			</nav>
+			
+			<!-- Profile Picture -->
 			<div class="container">
 				<div class="row profile">
 					<div class="col-md-3">
-						<div class="profile-sidebar"
-							style='background-color: WHITE; text-align ="CENTER"; padding: 20px;'>
-							<img class="profile" src="C:\Users\Roi\Desktop\profile.png"
-								style='width: 150px; height: 150px; align: ""'> <br>
-							<!-- <br>
+						<div class="profile-sidebar">
+							<img class="profile" src=<c:url value="/WEB-INF/ProfilePics/${user.cin}.jpg" />> <br>
 							<br>
 							<br>
 							<br>
 							<br>
-							<form action="Home" method="Post" enctype="multipart/form-data">
-								<input type="file" name="file" value="select image..." /> <input
-									type="submit" value="start upload" />
-							</form> -->
+							<br>
+							<form class ="Home" method="Post" action="${pageContext.request.contextPath}/UploadController" enctype="multipart/form-data">
+								<input type="file" name=file value="select image..." /> 
+								<input type="submit" value="start upload" />
+							</form> 
+							<br>
+							<br>
+							<!-- Students Info -->
 							<div class="profile-usertitle">
 								<div class="profile-usertitle-name">
 									<h1>
@@ -82,11 +88,12 @@
 
 						</div>
 					</div>
-					<div class="col-md-9" style='background-color: WHITE;'>
+					
+					<!-- Courses Students want to take -->
+					<div class="col-md-9">
 						<div class="profile-content">
 							Some user related content goes here... <br> <br>
-							<table
-								style='width: 80%; border: 1px solid black; border-spacing: 5px;'>
+							<table>
 								<tr>
 									<th>Class ID</th>
 									<th>Course</th>
@@ -106,6 +113,5 @@
 				</div>
 			</div>
 		</div>
-	</font>
 </body>
 </html>
