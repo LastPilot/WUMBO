@@ -18,3 +18,7 @@
 # do not ignore docs folder and everything within
 !docs/
 !docs/**
+
+# do not ignore sql and everything within
+!sql/
+!sql/**
