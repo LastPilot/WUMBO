@@ -1,0 +1,44 @@
+body {
+	background-color: WHITE; 
+	padding: 20px;
+}
+
+font {
+	color: BLACK; 
+	font-family: georgia;
+}
+
+div.goldBackground {
+	padding: 20px; 
+	background-color: GOLD;
+}
+
+div.logout{
+	Float: Right;
+	padding: 10px;
+}
+
+div.profile-sidebar {
+	background-color: WHITE; 
+	text-align ="CENTER"; 
+	padding: 20px;
+}
+
+img.profile {
+	width: 150px; 
+	height: 150px;
+}
+
+div.col-md-9 {
+	background-color: WHITE;
+}
+
+table {
+	width: 80%; 
+	border: 1px solid black; 
+	border-spacing: 5px;
+}
+
+form.Home {
+	Float: Left;
+}
