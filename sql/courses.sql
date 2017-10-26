@@ -122,5 +122,24 @@ alter table courses
 insert into courses values('MATH2110', 'Calculus I', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1);
 insert into courses values('MATH2120', 'Calculus II', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1.5);
 insert into courses values('MATH2550', 'Introduction to Linear Algebra', 3, 'Math Department', 1, 'Spring, Fall', ' ', 2);
-insert into courses values('MATH2120', 'Calculus II', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1.5);
-insert into courses values('MATH2120', 'Calculus II', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1.5);
+
+update courses
+set 
+prerequisites = "Calculus I"
+where name = 'Calculus II';
+
+update courses 
+set prerequisites = ''
+where prerequisites is NULL;
+
+
+insert into courses values('MATH2740', 'Introduction to Statistics', 3, 'Math Department', 1, 'Spring, Fall', ' ', 2);
+insert into courses values('PHYS2100', 'General Physics I: Mechanics', 5, 'Physics Department', 1, 'Spring, Fall', ' ', 1.5);
+insert into courses values('PHYS2200', 'General Physics II: Electromagnetism and Circuits', 5, 'Physics Department', 1, 'Spring, Fall', ' ', 2);
+insert into courses values('EE3445', 'Computer Organization', 3, 'Electrical Engineering Department', 1, 'Spring, Fall', ' ', 2.5);
+insert into courses values('COMM1100', 'Oral Communication', 3, 'Communications Department', 1, 'Spring, Fall', ' ', 2);
+insert into courses values('ENGL1010', 'Accelerated College Writing', 3, 'English Department', 1, 'Spring, Fall', ' ', 1.5);
+
+
+
+	
