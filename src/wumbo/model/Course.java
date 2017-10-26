@@ -7,17 +7,17 @@ public class Course {
 	String coordinator; 
 	Boolean available;
 	String semester;
-	String prerequisite;
+	String prerequisites;
 	Float year;
 	
-	public Course(String code, String name, float units, String coordinator, Boolean available, String semester, String prerequisite, Float year){
+	public Course(String code, String name, float units, String coordinator, Boolean available, String semester, String prerequisites, Float year){
 		this.code = code;
 		this.name = name;
 		this.units = units;
 		this.coordinator = coordinator; 
 		this.available = available; 
 		this.semester = semester;
-		this.prerequisite = prerequisite;
+		this.prerequisites = prerequisites;
 		this.year = year;
 		
 	}
@@ -70,12 +70,12 @@ public class Course {
 		this.semester = semester;
 	}
 	
-	public String getPrequisite(){
-		return prerequisite;
+	public String getPrequisites(){
+		return prerequisites;
 	}
 	
-	public void setPrerequisite(String prerequisite){
-		this.prerequisite = prerequisite;
+	public void setPrerequisite(String prerequisites){
+		this.prerequisites = prerequisites;
 	}
 	
 	public Float getYear(){

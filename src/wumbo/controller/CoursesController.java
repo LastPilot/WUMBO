@@ -67,7 +67,7 @@ public class CoursesController extends HttpServlet {
 			//create while loop
 			while(rs.next()) //starts at top of table and goes down row each time its a boolean if there is no next row it stops
 			{
-				Course course = new Course( rs.getString("code"), rs.getString("name"), rs.getFloat("units"), rs.getString("coordinator"), rs.getBoolean("available"), rs.getString("semester"), rs.getString("prerequisite"), rs.getFloat("year"));
+				Course course = new Course( rs.getString("code"), rs.getString("name"), rs.getFloat("units"), rs.getString("coordinator"), rs.getBoolean("available"), rs.getString("semester"), rs.getString("prerequisites"), rs.getFloat("year"));
 				//courses.add(new Course( rs.getString("code"), rs.getString("name"), rs.getFloat("units"), rs.getString("coordinator"), rs.getBoolean("available") ));
 				courses.add(course);
 			}
