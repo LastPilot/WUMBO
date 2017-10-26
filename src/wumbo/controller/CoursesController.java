@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
 import wumbo.model.Course;
 
 
-@WebServlet("/CoursesController")
+@WebServlet("/Courses")
 public class CoursesController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     

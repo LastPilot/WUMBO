@@ -39,10 +39,10 @@
 			<div class="container-fluid">
 				<div class="navbar-header ">
 					
-					 <a class="navbar-brand" href="../cs3337/Home">Home</a> 
-					 <a class="navbar-brand active" href="http://localhost:8080/WUMBO/CoursesController">Courses</a> 
-					 <a	class="navbar-brand" href="../cs3337/Help">Help</a> 
-					 <a	class="navbar-brand" href="../cs3337/Setting">Setting</a>
+					 <a class="navbar-brand" href="Home">Home</a> 
+					 <a class="navbar-brand active" href="http://localhost:8080/WUMBO/Courses">Courses</a> 
+					 <a	class="navbar-brand" href="RoadMap">Road Map</a> 
+
 					 
 				</div>
 				
