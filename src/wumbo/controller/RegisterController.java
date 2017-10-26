@@ -8,7 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,15 +20,6 @@ public class RegisterController extends HttpServlet {
 
 	public RegisterController() {
 		super();
-	}
-
-	public void init(ServletConfig config) throws ServletException {
-		super.init(config);
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			throw new ServletException(e);
-		}
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -75,7 +65,7 @@ public class RegisterController extends HttpServlet {
 			}
 
 			// create student
-			String insert = "insert into students (username, name, email, cin, password) values (?, ?, ?, ?, ?)";
+			String insert = "insert into students (username, student_name, email, cin, password) values (?, ?, ?, ?, ?)";
 			PreparedStatement ps02 = c.prepareStatement(insert);
 			ps02.setString(1, user);
 			ps02.setString(2, name);

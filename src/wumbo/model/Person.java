@@ -1,18 +1,33 @@
 package wumbo.model;
 
-public class Student {
+public class Person {
 	String name;
-	Integer cin;
+	int cin;
 	String email;
 	String username;
 	String password;
-	
-	public Student(String name, String username, String email, int cin, String password) {
+	boolean isAdmin;
+	double gpa;
+
+	// for the admin
+	public Person(String name, String username, String email, int cin, String password, boolean isAdmin) {
 		this.name = name;
 		this.username = username;
 		this.email = email;
 		this.cin = cin;
 		this.password = password;
+		this.isAdmin = isAdmin;
+	}
+
+	// for a student
+	public Person(String name, String username, String email, int cin, String password, boolean isAdmin, double gpa) {
+		this.name = name;
+		this.username = username;
+		this.email = email;
+		this.cin = cin;
+		this.password = password;
+		this.isAdmin = isAdmin;
+		this.gpa = gpa;
 	}
 
 	public String getName() {
@@ -54,5 +69,21 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void setAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+
+	public double getGpa() {
+		return gpa;
+	}
+
+	public void setGpa(double gpa) {
+		this.gpa = gpa;
+	}
+
 }
