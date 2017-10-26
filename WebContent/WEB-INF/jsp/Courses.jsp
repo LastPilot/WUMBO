@@ -65,6 +65,8 @@
 			    	<th>Units </th>	
 			    	<th>Coordinator </th>	
 			    	<th>Available </th>	
+			    	<th>Semester</th>
+			    	<th>Prerequisites</th>
 				</tr>
 			
 				<c:forEach items="${courses}" var="course">
@@ -74,6 +76,8 @@
 						<td>${course.units}</td>
 						<td>${course.coordinator}</td>
 						<td>${course.available}</td>
+						<td>${course.semester}</td>
+						<td>${course.prerequisites}</td> 
 					</tr>	
 				</c:forEach>	
 			</table>
