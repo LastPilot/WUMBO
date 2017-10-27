@@ -1,125 +1,177 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript">
 
-function stopStudent() {
-	var x = document.getElementById("studentInfoDisplay");
-	
-	x.display == "none";
-}
+<!-- CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="<c:url value="/css/Home.css"/>" />
 
-function courseFunction() {
-    var x = document.getElementById("courseInfoDisplay");
-    var y = document.getElementById("studentInfoDisplay");
-    
-    if (x.style.display === "none"&& y.style.display === "block") {
-		y.style.display = "none";
-		x.style.display = "block";
-	} else if (x.style.display === "none" && y.style.display === "none") {
-		x.style.display = "block";
-	} else {
-		x.style.display = "none";
-	}
-}
+<!-- JS files -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="<c:url value="/js/Admin.js"/>"></script>
+<script type="text/javascript"
+	src="<c:url value="/js/profilePicture.js"/>"></script>
 
-function studentFunction() {
-	var x = document.getElementById("studentInfoDisplay");
-	var y = document.getElementById("courseInfoDisplay");
-	if (x.style.display === "none" && y.style.display === "block") {
-		y.style.display = "none";
-		x.style.display = "block";
-	} else if (x.style.display === "none" && y.style.display === "none") {
-		x.style.display = "block";
-	} else {
-		x.style.display = "none";
-	}
-}
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
+<title>${user.name}'s Home</title>
+</head>
+<body>
 
-</script>
+	<div class="goldBackground">
 
-<link rel="stylesheet" href="css/adminStyle.css"></link>
+		<!-- Top Right Logo -->
+		<a href="http://www.calstatela.edu/"> <img
+			src="http://www.calstatela.edu/sites/default/files/groups/Mind%20Matters/brand_logo_homepage.png"
+			style='width: 300px; display: inline-block;' />
+		</a>
+		<h1 class="title" style="display: inline-block;">
+			<b>W</b>eb-<b>U</b>ser <b>M</b>ajor-<b>B</b>ound <b>O</b>rganizer
+		</h1> <br>
 
-		<title>Welcome Admin</title>
-	</head>
+		<!--nav bar-->
+		<nav class="navbar navbar-inverse navbar-static-top marginBottom-0"
+			role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle"
+						data-target="#navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
 
-	<body>
+					</button>
+					<a class="navbar-brand" href="#">Home</a> <a class="navbar-brand"
+						href="#">Courses</a> <a class="navbar-brand" href="#">Road Map</a>
+				</div>
 
-	<div class="header_logo">
-		<img class="img_logo" src="http://staticx.ibncollege.com/wcsstore/calstate-la/images/logo.jpg">
-	</div>
-	
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Students</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Help</a>
-      </li>
-    </ul>
-    <span class="navbar-text">
-      Log Out
-    </span>
-  </div>
-</nav>
-	
-<div class="row">
-	<div class="col-3">
-		<div class="admin_info">
-			<img src="http://pasp.org.pk/assets/img/pic.png">
-			<br>
-			<br>
-			<h3>Welcome,
-			<br>
-			Admin Admin</h3>
+				<!-- Logout Button -->
+				<div class="logout" class="profile-userbuttons">
+					<form action="Logout" method="post">
+						<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
+					</form>
+
+				</div>
+			</div>
+		</nav>
+
+		<!-- Profile Picture -->
+		<div class="container">
+			<div class="row profile">
+				<div class="col-md-3">
+					<div class="profile-sidebar">
+						<img class="profile img-circle"
+							onerror="if (this.src != 'http://pasp.org.pk/assets/img/pic.png') this.src = 'http://pasp.org.pk/assets/img/pic.png';"
+							src=<c:url value="/img/profile/${user.cin}.jpg" />> <br>
+						<br>
+						<button class="btn btn-success" id="updatePic">Update
+							Picture</button>
+						<form class="Home" method="Post" action="UploadController"
+							enctype="multipart/form-data" id="uploadPic">
+							<br> <input type="file" name=file value="select image..." />
+							<input class="btn btn-sm btn-primary" type="submit"
+								value="Upload" /> <br>
+							<br>
+						</form>
+						<!-- Students Info -->
+						<div class="profile-usertitle">
+							<div class="profile-usertitle-name">
+								<h3>
+									Welcome, <br> <strong><c:out value="${user.name}"></c:out></strong>
+								</h3>
+							</div>
+							<hr>
+							<h4>
+								Email:
+								<c:out value="${user.email}"></c:out>
+							</h4>
+							<hr>
+							<h4>
+								CIN:
+								<c:out value="${user.cin}"></c:out>
+							</h4>
+						</div>
+					</div>
+				</div>
+
+				<!-- Courses Students want to take -->
+				<div class="col-md-9">
+					<div class="profile-content">
+						<div class="col-9">
+							<div style="text-align: center;">
+								<div class="btn-group btn-group-lg" role="group"
+									aria-label="Toolbar with button groups">
+									<button class="btn btn-primary" id="studentTable">
+										Student</button>
+									<button class="btn btn-secondary" id="courseTable">
+										Courses</button>
+								</div>
+							</div>
+							<div id="courseInfoDisplay">
+								<table
+									class="table table-striped table-hover table-bordered table-condensed">
+									<thead>
+										<tr>
+											<th>Code</th>
+											<th>Name</th>
+											<th>Units</th>
+											<th>Coordinator</th>
+											<th>Available</th>
+											<th>Semester</th>
+											<th>Prerequisites</th>
+										</tr>
+									</thead>
+									<c:forEach items="${courses}" var="course">
+										<tr>
+											<td>${course.code}</td>
+											<td>${course.name}</td>
+											<td>${course.units}</td>
+											<td>${course.coordinator}</td>
+											<td><c:choose>
+													<c:when test="${course.available}">
+														<span class="glyphicon glyphicon-ok"
+															style="color: #00A41E;"></span>
+													</c:when>
+													<c:otherwise>
+														<span class="glyphicon glyphicon-remove"
+															style="color: #FF0004;"></span>
+													</c:otherwise>
+												</c:choose></td>
+											<td>${course.semester}</td>
+											<td>${course.prerequisites}</td>
+										</tr>
+									</c:forEach>
+								</table>
+							</div>
+
+							<div id="studentInfoDisplay">
+								<table
+									class="table table-striped table-hover table-bordered table-condensed">
+									<thead>
+										<tr>
+											<th>CIN</th>
+											<th>Name</th>
+											<th>Email</th>
+											<th>GPA</th>
+										</tr>
+									</thead>
+									<c:forEach items="${students}" var="student">
+										<tr>
+											<td>${student.cin}</td>
+											<td>${student.name}</td>
+											<td>${student.email}</td>
+											<td>${student.gpa}</td>
+										</tr>
+									</c:forEach>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	
-	<div class="col-9">
-	<div class="btn-group btn-group-lg" role="group" aria-label="Toolbar with button groups">
-		<button class="btn btn-secondary" onclick="studentFunction()">Student</button>
-		<button class="btn btn-secondary" onclick=" courseFunction()">Courses</button>
-	</div>
-		<div id="courseInfoDisplay">
-			<table class="table table-dark">
-  			<thead>
-    				<tr>
-					<th scope="col">Code</th>
-					<th scope="col">Semester</th>
-					<th scope="col">Available</th>
-				</tr>
-				</thead>
-			</table>
-		</div>
-		
-		<div id="studentInfoDisplay">
-			<table class="table table-dark">
-  			<thead>
-    				<tr>
-					<th scope="col">CIN</th>
-					<th scope="col">Name</th>
-					<th scope="col">Email</th>
-					<th scope="col">GPA</th>
-				</tr>
-				</thead>
-			</table>
-		</div>
-	</div>
-</div>
-
-
-
-	</body>
+	<div class="footer">&copy; Kristen Marenco, Luis Gonzales, Franky
+		Gudino, Roi Chico 2017. All Rights Reserved.</div>
+</body>
 </html>

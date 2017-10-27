@@ -44,7 +44,7 @@ public class UploadController extends HttpServlet {
 		ServletFileUpload upload = new ServletFileUpload(factory);
 
 		// The directory we want to save the uploaded files to.
-		String fileDir = getServletContext().getRealPath("/WEB-INF/ProfilePics");
+		String fileDir = getServletContext().getRealPath("/img/profile");
 
 		// Parse the request
 		try {
@@ -69,8 +69,11 @@ public class UploadController extends HttpServlet {
 					File file = new File(fileDir, user.getCin() + suffix);
 					item.write(file);
 					
-					
-					response.sendRedirect("Home");
+					if (user.isAdmin()) {
+						response.sendRedirect("AdminHome");
+					} else {
+						response.sendRedirect("Home");
+					}
 
 				}
 			}

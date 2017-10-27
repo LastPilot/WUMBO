@@ -70,7 +70,7 @@ public class Course {
 		this.semester = semester;
 	}
 	
-	public String getPrequisites(){
+	public String getPrerequisites(){
 		return prerequisites;
 	}
 	

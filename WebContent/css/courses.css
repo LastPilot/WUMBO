@@ -1,0 +1,42 @@
+/*body, html {
+	height: 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+}*/
+
+b {
+	color: purple;
+}
+
+img {
+	width: 20%;
+}
+
+.header {
+	background-color: GOLD;
+}
+
+.logout {
+	padding: 10px;
+}
+
+table {
+	background-color: #d6d4d3;
+}
+
+th {
+	background-color: #777a75;
+	color: white;
+}
+
+hr {
+	width: 10%;
+	color: #fff;
+}
+
+.footer {
+	background-color: black;
+	color: grey;
+	padding: 10px;
+	text-align: center;
+}

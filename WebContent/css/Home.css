@@ -1,6 +1,18 @@
-body {
+/*body {
 	background-color: WHITE; 
 	padding: 20px;
+}*/
+
+#courseInfoDisplay {
+	display: none;
+}
+
+#uploadPic {
+	display: none;
+}
+
+b {
+	color: purple;
 }
 
 font {
@@ -9,7 +21,7 @@ font {
 }
 
 div.goldBackground {
-	padding: 20px; 
+	/*padding: 20px;*/ 
 	background-color: GOLD;
 }
 
@@ -20,7 +32,7 @@ div.logout{
 
 div.profile-sidebar {
 	background-color: WHITE; 
-	text-align ="CENTER"; 
+	text-align: center; 
 	padding: 20px;
 }
 
@@ -39,6 +51,27 @@ table {
 	border-spacing: 5px;
 }
 
+table {
+	background-color: #d6d4d3;
+}
+
+th {
+	background-color: #777a75;
+	color: white;
+}
+
+hr {
+	width: 10%;
+	color: #fff;
+}
+
 form.Home {
 	Float: Left;
+}
+
+.footer {
+	background-color: black;
+	color: grey;
+	padding: 10px;
+	text-align: center;
 }

@@ -14,7 +14,6 @@
 
 <!-- Web Page JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="<c:url value="/js/Login.js"/>"></script>
 
 <!-- Website Font style -->
 <link rel="stylesheet"
