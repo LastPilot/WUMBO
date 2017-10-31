@@ -125,7 +125,7 @@ insert into courses values('MATH2550', 'Introduction to Linear Algebra', 3, 'Mat
 
 update courses
 set 
-prerequisites = "Calculus I"
+prerequisites = "MATH2110"
 where name = 'Calculus II';
 
 update courses 
