@@ -11,6 +11,7 @@ CREATE TABLE courses  (
     semester varchar(100)
 ); 
 
+insert into courses values('CS1010', 'Introduction To Higher Education For Computer Science Majors', 3, 'Raj Pamula', 1, 'Spring, Fall', '', 1);
 
 insert into courses values ('CS1090', 'BASIC Programming', 2, 'Raj Pamula', false, 'Spring, Fall');
 
@@ -125,7 +126,7 @@ insert into courses values('MATH2550', 'Introduction to Linear Algebra', 3, 'Mat
 
 update courses
 set 
-prerequisites = "Calculus I"
+prerequisites = "MATH2110"
 where name = 'Calculus II';
 
 update courses 
@@ -139,3 +140,9 @@ insert into courses values('PHYS2200', 'General Physics II: Electromagnetism and
 insert into courses values('EE3445', 'Computer Organization', 3, 'Electrical Engineering Department', 1, 'Spring, Fall', ' ', 2.5);
 insert into courses values('COMM1100', 'Oral Communication', 3, 'Communications Department', 1, 'Spring, Fall', ' ', 2);
 insert into courses values('ENGL1010', 'Accelerated College Writing', 3, 'English Department', 1, 'Spring, Fall', ' ', 1.5);
+
+update courses
+set year = ""
+where code = "";
+
+
