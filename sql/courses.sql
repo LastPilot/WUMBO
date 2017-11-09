@@ -122,5 +122,4 @@ alter table courses
 insert into courses values('MATH2110', 'Calculus I', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1);
 insert into courses values('MATH2120', 'Calculus II', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1.5);
 insert into courses values('MATH2550', 'Introduction to Linear Algebra', 3, 'Math Department', 1, 'Spring, Fall', ' ', 2);
-insert into courses values('MATH2120', 'Calculus II', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1.5);
-insert into courses values('MATH2120', 'Calculus II', 4, 'Math Department', 1, 'Spring, Fall', ' ', 1.5);
+insert into courses values('GE', 'GE Course', 3, 'Other', 1, 'Spring, Fall', ' ', 1);

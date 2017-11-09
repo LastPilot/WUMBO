@@ -34,7 +34,7 @@ public class CoursesController extends HttpServlet {
 		HttpSession session = request.getSession();
 		Person user = (Person) session.getAttribute("user");
 		
-		if (!user.isAdmin()) {
+		if (!user.isAdmin() && user != null) {
 			// retrieve data from database
 			List<Course> courses = new ArrayList<Course>();
 			Connection c = null;

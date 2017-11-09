@@ -14,4 +14,12 @@ $(function() {
 		$("#studentInfoDisplay").hide();
 		$("#courseInfoDisplay").show();
 	});
+	
+	$("#toggleForm").click(function() {
+		$(".center").show();
+	});
+	
+	$("#cancel").click(function() {
+		$(".center").hide();
+	});
 });

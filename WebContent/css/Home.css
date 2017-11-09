@@ -3,6 +3,38 @@
 	padding: 20px;
 }*/
 
+.editForm {
+	text-align: center;
+	position: relative;
+  	top: 50%;
+  	transform: perspective(1px) translateY(-50%);
+}
+
+.center {
+	display: none;
+	position: fixed;
+	text-align: center;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	margin-left: auto ;
+  	margin-right: auto ;
+  	z-index: 10;
+  	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formBox {
+	text-align: center;
+	display: inline-block;
+	background-color: white;
+	padding: 1.25em 1.25em 1.25em 1.25em;
+}
+
+.alink {
+	cursor: pointer;
+}
+
 #courseInfoDisplay {
 	display: none;
 }

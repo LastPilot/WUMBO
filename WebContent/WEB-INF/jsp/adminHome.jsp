@@ -20,6 +20,21 @@
 </head>
 <body>
 
+	<div class="center">
+		<div class="editForm">
+			<div class="formBox">
+				<form action="#" method="Post">
+				Change the coordinator for the course.	
+				<input	type='text' name='coordinator' placeholder="Change Coordinator"><hr>
+				<label for="available">Is the class closed?</label>
+				<input type="radio" name="a" id="available" value="available" /><hr>
+				<input type="submit" name="submit" value="Submit"  id="submit" class="btn btn-primary btn-sm" />
+				<hr> <a class="alink" id="cancel">Cancel</a>
+				</form>
+			</div>			
+		</div>
+	</div>
+
 	<div class="goldBackground">
 
 		<!-- Top Right Logo -->
@@ -123,7 +138,7 @@
 									</thead>
 									<c:forEach items="${courses}" var="course">
 										<tr>
-											<td>${course.code}</td>
+											<td><a id="toggleForm" class="alink">${course.code}</a></td>
 											<td>${course.name}</td>
 											<td>${course.units}</td>
 											<td>${course.coordinator}</td>

@@ -32,7 +32,7 @@ public class AdminHomeController extends HttpServlet {
 		HttpSession session = request.getSession();
 		Person user = (Person) session.getAttribute("user");
 
-		if (user.isAdmin()) {
+		if (user.isAdmin() && user != null) {
 			List<Person> students = new ArrayList<Person>();
 			List<Course> courses = new ArrayList<Course>();
 			// retrieve data from database
