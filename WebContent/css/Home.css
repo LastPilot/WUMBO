@@ -2,7 +2,6 @@
 	background-color: WHITE; 
 	padding: 20px;
 }*/
-
 #courseInfoDisplay {
 	display: none;
 }
@@ -16,38 +15,43 @@ b {
 }
 
 font {
-	color: BLACK; 
+	color: BLACK;
 	font-family: georgia;
 }
 
 div.goldBackground {
-	/*padding: 20px;*/ 
+	/*padding: 20px;*/
 	background-color: GOLD;
 }
 
-div.logout{
+div.logout {
 	Float: Right;
 	padding: 10px;
 }
 
 div.profile-sidebar {
-	background-color: WHITE; 
-	text-align: center; 
+	background-color: WHITE;
+	text-align: center;
 	padding: 20px;
 }
 
 img.profile {
-	width: 150px; 
+	width: 150px;
 	height: 150px;
 }
 
 div.col-md-9 {
 	background-color: WHITE;
+	text-align: center;
+}
+
+div.button {
+	padding: 10px;
 }
 
 table {
-	width: 80%; 
-	border: 1px solid black; 
+	width: 80%;
+	border: 1px solid black;
 	border-spacing: 5px;
 }
 
@@ -69,9 +73,14 @@ form.Home {
 	Float: Left;
 }
 
-.footer {
+div.footer {
+	/* position: absolute;
+	right: 0; bottom : 10; left : 0;
+	display: block; */
 	background-color: black;
 	color: grey;
 	padding: 10px;
 	text-align: center;
+	bottom: 0;
+	left: 0;
 }

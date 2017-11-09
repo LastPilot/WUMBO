@@ -13,9 +13,12 @@
 <script type="text/javascript"
 	src="<c:url value="/js/profilePicture.js"/>"></script>
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="<c:url value="/js/HomeTable.js"/>"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
-<title>${user.name}'s Home</title>
+<title>${user.name}'sHome</title>
 </head>
 <body>
 
@@ -26,10 +29,11 @@
 			src="http://www.calstatela.edu/sites/default/files/groups/Mind%20Matters/brand_logo_homepage.png"
 			style='width: 300px; display: inline-block;' />
 		</a>
-		<h1 class="title" style="display: inline-block;">
+		<h1 class="title" style="display: inline-block; postion: center;">
 			<b>W</b>eb-<b>U</b>ser <b>M</b>ajor-<b>B</b>ound <b>O</b>rganizer
-		</h1> <br>
-		
+		</h1>
+		<br>
+
 		<!--nav bar-->
 		<nav class="navbar navbar-inverse navbar-static-top marginBottom-0"
 			role="navigation">
@@ -62,15 +66,15 @@
 					<div class="profile-sidebar">
 						<img class="profile img-circle"
 							onerror="if (this.src != 'http://pasp.org.pk/assets/img/pic.png') this.src = 'http://pasp.org.pk/assets/img/pic.png';"
-							src=<c:url value="/img/profile/${user.cin}.jpg" />> <br> <br>
+							src=<c:url value="/img/profile/${user.cin}.jpg"/>> <br>
+						<br>
 						<button class="btn btn-success" id="updatePic">Update
 							Picture</button>
 						<form class="Home" method="Post" action="UploadController"
 							enctype="multipart/form-data" id="uploadPic">
 							<br> <input type="file" name=file value="select image..." />
 							<input class="btn btn-sm btn-primary" type="submit"
-								value="Upload" /> <br>
-							<br>
+								value="Upload" /> <br> <br>
 						</form>
 						<!-- Students Info -->
 						<div class="profile-usertitle">
@@ -103,29 +107,146 @@
 				</div>
 
 				<!-- Courses Students want to take -->
+				<!-- First Year -->
 				<div class="col-md-9">
-					<div class="profile-content">
-						Some user related content goes here... <br> <br>
-						<table>
-							<tr>
-								<th>Class ID</th>
-								<th>Course</th>
-								<th>Professor</th>
-								<th>Time</th>
-							</tr>
-							<tr bgcolor="LIGHTGRAY">
-								<td>a</td>
-								<td>a</td>
-								<td>a</td>
-								<td>a</td>
-							</tr>
-						</table>
+					<div class="btn-group btn-group-lg" role="group"
+						aria-label="Toolbar with button groups">
+
+						<div class="button">
+							<button class="btn btn-secondary" id="1yearTable">
+								<!-- onclick="studentFunction()" -->
+								First Year
+							</button>
+
+							<!-- Second Year -->
+							<button class="btn btn-secondary" id="2yearTable">
+								<!-- onclick=" courseFunction()" -->
+								Second Year
+							</button>
+
+							<!-- Third Year -->
+							<button class="btn btn-secondary" id="3yearTable">
+								<!-- onclick=" courseFunction()" -->
+								Third Year
+							</button>
+
+							<!-- Fourth Year -->
+							<button class="btn btn-secondary" id="4yearTable">
+								<!-- onclick=" courseFunction()" -->
+								Fourth Year
+							</button>
+
+							<!-- Fifth Year -->
+							<button class="btn btn-secondary" id="5yearTable">
+								<!-- onclick=" courseFunction()" -->
+								Fifth Year
+							</button>
+						</div>
+						<c:forEach items="${semester}" var="semester">
+							<c:choose>
+								<c:when test="${semester.key<3}">
+									<table id="y1"
+										class="table table-striped table-hover table-bordered table-condensed">
+										<tr>
+											<th>Code</th>
+											<th>Name</th>
+											<th>Unit</th>
+											<th>Coordinator</th>
+										</tr>
+										<c:forEach items="${semester.value}" var="course">
+											<tr>
+												<td>${course.code}</td>
+												<td>${course.name}</td>
+												<td>${course.units}</td>
+												<td>${course.coordinator}</td>
+											</tr>
+										</c:forEach>
+									</table>
+								</c:when>
+								<c:when test="${semester.key<5}">
+									<table id="y2"
+										class="table table-striped table-hover table-bordered table-condensed">
+										<tr>
+											<th>Code</th>
+											<th>Name</th>
+											<th>Unit</th>
+											<th>Coordinator</th>
+										</tr>
+										<c:forEach items="${semester.value}" var="course">
+											<tr>
+												<td>${course.code}</td>
+												<td>${course.name}</td>
+												<td>${course.units}</td>
+												<td>${course.coordinator}</td>
+											</tr>
+										</c:forEach>
+									</table>
+								</c:when>
+								<c:when test="${semester.key<7}">
+									<table id="y3"
+										class="table table-striped table-hover table-bordered table-condensed">
+										<tr>
+											<th>Code</th>
+											<th>Name</th>
+											<th>Unit</th>
+											<th>Coordinator</th>
+										</tr>
+										<c:forEach items="${semester.value}" var="course">
+											<tr>
+												<td>${course.code}</td>
+												<td>${course.name}</td>
+												<td>${course.units}</td>
+												<td>${course.coordinator}</td>
+											</tr>
+										</c:forEach>
+									</table>
+								</c:when>
+								<c:when test="${semester.key<9}">
+									<table id="y4"
+										class="table table-striped table-hover table-bordered table-condensed">
+										<tr>
+											<th>Code</th>
+											<th>Name</th>
+											<th>Unit</th>
+											<th>Coordinator</th>
+										</tr>
+										<c:forEach items="${semester.value}" var="course">
+											<tr>
+												<td>${course.code}</td>
+												<td>${course.name}</td>
+												<td>${course.units}</td>
+												<td>${course.coordinator}</td>
+											</tr>
+										</c:forEach>
+									</table>
+								</c:when>
+								<c:otherwise>
+									<table id="y5"
+										class="table table-striped table-hover table-bordered table-condensed">
+										<tr>
+											<th>Code</th>
+											<th>Name</th>
+											<th>Unit</th>
+											<th>Coordinator</th>
+										</tr>
+										<c:forEach items="${semester.value}" var="course">
+											<tr>
+												<td>${course.code}</td>
+												<td>${course.name}</td>
+												<td>${course.units}</td>
+												<td>${course.coordinator}</td>
+											</tr>
+										</c:forEach>
+									</table>
+								</c:otherwise>
+							</c:choose>
+						</c:forEach>
 					</div>
-					<br>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="footer">&copy; Kristen Marenco, Luis Gonzales, Franky
 		Gudino, Roi Chico 2017. All Rights Reserved.</div>
 </body>

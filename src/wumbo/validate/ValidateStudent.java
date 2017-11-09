@@ -37,7 +37,7 @@ public class ValidateStudent extends HttpServlet {
 			c = DriverManager.getConnection(url, username, password);
 
 			// See if user exists
-			String check = "select username from students where username = ?";
+			String check = "select username from persons where username = ?";
 			PreparedStatement ps = c.prepareStatement(check);
 			ps.setString(1, user);
 			ResultSet rs = ps.executeQuery();
