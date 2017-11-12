@@ -142,11 +142,11 @@
 								Fifth Year
 							</button>
 						</div>
-						<c:forEach items="${semester}" var="semester">
+						<c:forEach items="${semesters}" var="semester">
 							<c:choose>
 								<c:when test="${semester.key<3}">
-									<table id="y1"
-										class="table table-striped table-hover table-bordered table-condensed">
+									<table
+										class="y1 table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -164,8 +164,8 @@
 									</table>
 								</c:when>
 								<c:when test="${semester.key<5}">
-									<table id="y2"
-										class="table table-striped table-hover table-bordered table-condensed">
+									<table
+										class="y2 table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -183,8 +183,8 @@
 									</table>
 								</c:when>
 								<c:when test="${semester.key<7}">
-									<table id="y3"
-										class="table table-striped table-hover table-bordered table-condensed">
+									<table
+										class="y3 table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -202,8 +202,8 @@
 									</table>
 								</c:when>
 								<c:when test="${semester.key<9}">
-									<table id="y4"
-										class="table table-striped table-hover table-bordered table-condensed">
+									<table
+										class="y4 table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -221,8 +221,8 @@
 									</table>
 								</c:when>
 								<c:otherwise>
-									<table id="y5"
-										class="table table-striped table-hover table-bordered table-condensed">
+									<table
+										class="y5 table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>

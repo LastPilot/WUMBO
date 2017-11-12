@@ -2,7 +2,22 @@
 	background-color: WHITE; 
 	padding: 20px;
 }*/
-<<<<<<< HEAD
+
+.y2 {
+	display: none;
+}
+
+.y3 {
+	display: none;
+}
+
+.y4 {
+	display: none;
+}
+
+.y5 {
+	display: none;
+}
 
 .editForm {
 	text-align: center;
@@ -36,8 +51,6 @@
 	cursor: pointer;
 }
 
-=======
->>>>>>> origin/roi-home
 #courseInfoDisplay {
 	display: none;
 }
