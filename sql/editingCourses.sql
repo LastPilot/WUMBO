@@ -132,4 +132,9 @@ insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Comp
 insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
 insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
 
+update courses
+set 
+available = 1
+where available = 0;
+
 select * from courses;
