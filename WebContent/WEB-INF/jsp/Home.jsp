@@ -45,8 +45,7 @@
 
 					</button>
 					<a class="navbar-brand" href="#">Home</a> <a class="navbar-brand"
-						href="Courses">Courses</a> <a class="navbar-brand" href="#RoadMap">Road
-						Map</a>
+						href="Courses">Courses</a>
 				</div>
 
 				<!-- Logout Button -->
@@ -113,7 +112,7 @@
 						aria-label="Toolbar with button groups">
 
 						<div class="button">
-							<button class="btn btn-secondary" id="1yearTable">
+							<button class="btn btn-primary" id="1yearTable">
 								<!-- onclick="studentFunction()" -->
 								First Year
 							</button>
@@ -145,8 +144,11 @@
 						<c:forEach items="${semesters}" var="semester">
 							<c:choose>
 								<c:when test="${semester.key<3}">
+									<div class="y1">
+									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
+									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
 									<table
-										class="y1 table table-striped table-hover table-bordered table-condensed">
+										class="table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -162,10 +164,14 @@
 											</tr>
 										</c:forEach>
 									</table>
+									</div>
 								</c:when>
 								<c:when test="${semester.key<5}">
+									<div class="y2">
+									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
+									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
 									<table
-										class="y2 table table-striped table-hover table-bordered table-condensed">
+										class="table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -181,10 +187,14 @@
 											</tr>
 										</c:forEach>
 									</table>
+									</div>
 								</c:when>
 								<c:when test="${semester.key<7}">
+									<div class="y3">
+									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
+									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
 									<table
-										class="y3 table table-striped table-hover table-bordered table-condensed">
+										class="table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -200,10 +210,14 @@
 											</tr>
 										</c:forEach>
 									</table>
+									</div>
 								</c:when>
 								<c:when test="${semester.key<9}">
+									<div class="y4">
+									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
+									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
 									<table
-										class="y4 table table-striped table-hover table-bordered table-condensed">
+										class="table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -219,10 +233,14 @@
 											</tr>
 										</c:forEach>
 									</table>
+									</div>
 								</c:when>
 								<c:otherwise>
+									<div class="y5">
+									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
+									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
 									<table
-										class="y5 table table-striped table-hover table-bordered table-condensed">
+										class="table table-striped table-hover table-bordered table-condensed">
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
@@ -238,6 +256,7 @@
 											</tr>
 										</c:forEach>
 									</table>
+									</div>
 								</c:otherwise>
 							</c:choose>
 						</c:forEach>

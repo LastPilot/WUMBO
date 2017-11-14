@@ -51,7 +51,7 @@
 	cursor: pointer;
 }
 
-#courseInfoDisplay {
+#studentInfoDisplay {
 	display: none;
 }
 
@@ -82,6 +82,7 @@ div.profile-sidebar {
 	background-color: WHITE;
 	text-align: center;
 	padding: 20px;
+	margin-bottom: 20px;
 }
 
 img.profile {

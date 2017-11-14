@@ -3,7 +3,6 @@ drop table if exists cins;
 drop table if exists semester;
 
 create table persons (
-    id          	integer auto_increment primary key,
     person_name		varchar(255) not null,
     username		varchar(255) not null unique,    
     email			varchar(255) not null,
@@ -44,9 +43,9 @@ insert into semester values(10, 300300300, 'CS4962', 'CS4963', 'CS Elective', nu
 
 
 -- sample student accounts
-insert into persons values(1, 'Pamula', 'godmula', 'rpamula@calstatela.edu', 100100100, 'a', true);
-insert into persons values(2, 'Franky Gudino', 'fgudino3', 'frankyjg96@gmail.com', 300300300, 'a', false);
-insert into persons values(3, 'firstname lastname','a', 'a@a.gov', 200200200, 'a', false);
+insert into persons values('Pamula', 'godmula', 'rpamula@calstatela.edu', 100100100, 'a', true);
+insert into persons values('Franky Gudino', 'fgudino3', 'frankyjg96@gmail.com', 300300300, 'a', false);
+insert into persons values('firstname lastname','a', 'a@a.gov', 200200200, 'a', false);
 -- enter your own student values here, choose a cin, then set its last value to true below
 
 

@@ -19,15 +19,16 @@
 <title>${user.name}'s Home</title>
 </head>
 <body>
-
+	<!-- Change course information -->
 	<div class="center">
 		<div class="editForm">
 			<div class="formBox">
-				<form action="#" method="Post">
-				Change the coordinator for the course.	
-				<input	type='text' name='coordinator' placeholder="Change Coordinator"><hr>
-				<label for="available">Is the class closed?</label>
-				<input type="radio" name="a" id="available" value="available" /><hr>
+				<form action="AdminCourse" method="Post">
+				Change the coordinator for the course:<br>	
+				<input	type='text' name='coordinator' ><hr>
+				<label for="available">Open class?</label>
+				<input type="checkbox" name="a" id="available" /><hr>
+				<input type="hidden" name="hidden" id="hidden">
 				<input type="submit" name="submit" value="Submit"  id="submit" class="btn btn-primary btn-sm" />
 				<hr> <a class="alink" id="cancel">Cancel</a>
 				</form>
@@ -56,8 +57,6 @@
 						<span class="sr-only">Toggle navigation</span>
 
 					</button>
-					<a class="navbar-brand" href="#">Home</a> <a class="navbar-brand"
-						href="#">Courses</a> <a class="navbar-brand" href="#">Road Map</a>
 				</div>
 
 				<!-- Logout Button -->
@@ -116,10 +115,10 @@
 							<div style="text-align: center;">
 								<div class="btn-group btn-group-lg" role="group"
 									aria-label="Toolbar with button groups">
-									<button class="btn btn-primary" id="studentTable">
-										Student</button>
-									<button class="btn btn-secondary" id="courseTable">
+									<button class="btn btn-primary" id="courseTable">
 										Courses</button>
+									<button class="btn btn-secondary" id="studentTable">
+										Students</button>
 								</div>
 							</div>
 							<div id="courseInfoDisplay">
@@ -138,10 +137,10 @@
 									</thead>
 									<c:forEach items="${courses}" var="course">
 										<tr>
-											<td><a id="toggleForm" class="alink">${course.code}</a></td>
+											<td><a class="alink">${course.code}</a></td>
 											<td>${course.name}</td>
 											<td>${course.units}</td>
-											<td>${course.coordinator}</td>
+											<td class="${course.code}">${course.coordinator}</td>
 											<td><c:choose>
 													<c:when test="${course.available}">
 														<span class="glyphicon glyphicon-ok"

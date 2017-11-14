@@ -40,7 +40,8 @@ public class CoursesController extends HttpServlet {
 			Connection c = null;
 			try {
 				// connect
-				String url = "jdbc:mysql://cs3.calstatela.edu:3306/cs3337stu04";
+				String url = "jdbc:mysql://localhost/cs3337stu04?useSSL=false"; 
+				// "jdbc:mysql://cs3.calstatela.edu:3306/cs3337stu04?useSSL=false";
 				String username = "cs3337stu04";
 				String password = "f9k.cwxn";
 				c = DriverManager.getConnection(url, username, password);

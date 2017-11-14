@@ -15,8 +15,13 @@ $(function() {
 		$("#courseInfoDisplay").show();
 	});
 	
-	$("#toggleForm").click(function() {
+	$(".alink").click(function() {
 		$(".center").show();
+		var code = $(this).html();
+		var coord = $("." + code).html();
+		$("input[name='coordinator']").val(coord);
+		$("#hidden").val(code);
+		
 	});
 	
 	$("#cancel").click(function() {
