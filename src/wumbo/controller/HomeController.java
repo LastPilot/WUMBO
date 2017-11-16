@@ -47,13 +47,17 @@ public class HomeController extends HttpServlet {
 				String password = "f9k.cwxn";
 				c = DriverManager.getConnection(url, username, password);				
 				
+				// algorithm for displaying road map
 				for (int i = 1; i <= 10; i++) {
 					List<Course> courses = new ArrayList<Course>();
 					
 					// retrieves all courses for a semester for current user.
-					String sql = "select * from courses c inner join semester s1 inner join persons p "
+					/*String sql = "select * from courses c inner join semester s1 inner join persons p "
 							+ "on p.cin = s1.cin and c.code = s1.c1 or c.code = s1.c2 or c.code = s1.c3 or c.code = s1.c4"
-							+ " where s1.sem = " + i + " and p.cin = " + user.getCin();
+							+ " where s1.sem = " + i + " and p.cin = " + user.getCin();*/
+					String sql = "select * from courses c inner join semester s "
+							+ "on c.code = s.c1 or c.code = s.c2 or c.code = s.c3 or c.code = s.c4"
+							+ " where s.sem = " + i + " and s.cin = " + user.getCin();
 					Statement st = c.createStatement();
 					ResultSet rs = st.executeQuery(sql);
 					

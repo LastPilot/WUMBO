@@ -1,4 +1,4 @@
-use cs3337stu04;
+-- use cs3337stu04;
 
 #google 
 #varchar20, varchar100, float, varchar100, boolean
@@ -114,27 +114,26 @@ insert into courses values('MATH2550', 'Introduction to Linear Algebra', 3, 'Mat
 insert into courses values('MATH2740', 'Introduction to Statistics', 3, 'Math Department', 1, 'Spring, Fall', null, 2);
 insert into courses values('PHYS2100', 'General Physics I: Mechanics', 5, 'Physics Department', 1, 'Spring, Fall', null, 2);
 insert into courses values('PHYS2200', 'General Physics II: Electromagnetism and Circuits', 5, 'Physics Department', 1, 'Spring, Fall', 'PHYS2100', 2.5);
-insert into courses values('COMM1100', 'Oral Communication', 3, 'Communications Department', 1, 'Spring, Fall', null, 1);
-insert into courses values('ENGL1010', 'Accelerated College Writing', 3, 'English Department', 1, 'Spring, Fall', null, 1);
+-- insert into courses values('COMM1100', 'Oral Communication', 3, 'Communications Department', 1, 'Spring, Fall', null, 1);
+-- insert into courses values('ENGL1010', 'Accelerated College Writing', 3, 'English Department', 1, 'Spring, Fall', null, 1);
 
-insert into courses values('GE B2/B3', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 1);
-insert into courses values('HIST2020', 'United States History 1877 to Present', 3, 'History Department', 1, 'Spring, Fall', null, 1.5);
-insert into courses values('POLS1000', 'Government and American Society', 3, 'Political Science Department', 1, 'Spring, Fall', null, 1.5);
-insert into courses values('GEC1', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 2);
-insert into courses values('GED1', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 2.5);
-insert into courses values('ENGL2030', 'Introduction to Technical Writing', 3, 'English Department', 1, 'Spring, Fall', 'ENGL1010', 2.5);
-insert into courses values('GED2', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 3.5);
+-- insert into courses values('GE B2/B3', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 1);
+-- insert into courses values('HIST2020', 'United States History 1877 to Present', 3, 'History Department', 1, 'Spring, Fall', null, 1.5);
+-- insert into courses values('POLS1000', 'Government and American Society', 3, 'Political Science Department', 1, 'Spring, Fall', null, 1.5);
+-- insert into courses values('GEC1', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 2);
+-- insert into courses values('GED1', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 2.5);
+-- insert into courses values('ENGL2030', 'Introduction to Technical Writing', 3, 'English Department', 1, 'Spring, Fall', 'ENGL1010', 2.5);
+-- insert into courses values('GED2', 'General Education Course', 3, 'Respective', 1, 'Spring, Fall', null, 3.5);
 
-insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 3.5);
-insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
-insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
-insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
-insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
-insert into courses values ('CSElective', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
+insert into courses values('GE', 'GE Course', 3, 'Other', 1, 'Spring, Fall', ' ', 1);
+
+insert into courses values ('CSElective1', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 3.5);
+insert into courses values ('CSElective2', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
+insert into courses values ('CSElective3', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
+insert into courses values ('CSElective4', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
+insert into courses values ('CSElective5', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
+insert into courses values ('CSElective6', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
 
 update courses
 set 
-available = 1
-where available = 0;
-
-select * from courses;
+available = 1;

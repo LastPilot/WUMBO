@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-=======
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
->>>>>>> Luis-admin
 <html>
 <head>
 
@@ -57,7 +49,7 @@
 
 		<!--nav bar-->
 		<nav class="navbar navbar-inverse navbar-static-top marginBottom-0"
-			role="navigation">
+			role="navigation" style="text-align: center;">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle"
@@ -66,7 +58,7 @@
 
 					</button>
 				</div>
-
+				<span style="font-size: 30px; color: rgb(34,34,34);">hello world!</span>
 				<!-- Logout Button -->
 				<div class="logout" class="profile-userbuttons">
 					<form action="Logout" method="post">

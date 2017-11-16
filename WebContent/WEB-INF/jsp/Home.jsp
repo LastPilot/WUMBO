@@ -18,7 +18,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
-<title>${user.name}'sHome</title>
+<title>${user.name}'s Home</title>
 </head>
 <body>
 
