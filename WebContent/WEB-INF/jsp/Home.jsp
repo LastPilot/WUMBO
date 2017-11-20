@@ -18,7 +18,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
-<title>${user.name}'s Home</title>
+<title>${user.name}'sHome</title>
 </head>
 <body>
 
@@ -51,12 +51,17 @@
 				<!-- Logout Button -->
 				<div class="logout" class="profile-userbuttons">
 					<form action="Logout" method="post">
-						<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
+						<input class="btn btn-link" type="submit" value="Logout" />
 					</form>
+
+
 
 				</div>
 			</div>
 		</nav>
+	</div>
+
+	<div class="main-content">
 
 		<!-- Profile Picture -->
 		<div class="container">
@@ -105,6 +110,8 @@
 					</div>
 				</div>
 
+				<div class="between-cols"></div>
+
 				<!-- Courses Students want to take -->
 				<!-- First Year -->
 				<div class="col-md-9">
@@ -145,117 +152,137 @@
 							<c:choose>
 								<c:when test="${semester.key<3}">
 									<div class="y1">
-									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
-									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
-									<table
-										class="table table-striped table-hover table-bordered table-condensed">
-										<tr>
-											<th>Code</th>
-											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
-										</tr>
-										<c:forEach items="${semester.value}" var="course">
+										<c:if test="${semester.key % 2 == 0}">
+											<b>Spring</b>
+										</c:if>
+										<c:if test="${semester.key % 2 != 0}">
+											<b>Fall</b>
+										</c:if>
+										<table
+											class="table table-striped table-hover table-bordered table-condensed">
 											<tr>
-												<td>${course.code}</td>
-												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<th>Code</th>
+												<th>Name</th>
+												<th>Unit</th>
+												<th>Coordinator</th>
 											</tr>
-										</c:forEach>
-									</table>
+											<c:forEach items="${semester.value}" var="course">
+												<tr>
+													<td>${course.code}</td>
+													<td>${course.name}</td>
+													<td>${course.units}</td>
+													<td>${course.coordinator}</td>
+												</tr>
+											</c:forEach>
+										</table>
 									</div>
 								</c:when>
 								<c:when test="${semester.key<5}">
 									<div class="y2">
-									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
-									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
-									<table
-										class="table table-striped table-hover table-bordered table-condensed">
-										<tr>
-											<th>Code</th>
-											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
-										</tr>
-										<c:forEach items="${semester.value}" var="course">
+										<c:if test="${semester.key % 2 == 0}">
+											<b>Spring</b>
+										</c:if>
+										<c:if test="${semester.key % 2 != 0}">
+											<b>Fall</b>
+										</c:if>
+										<table
+											class="table table-striped table-hover table-bordered table-condensed">
 											<tr>
-												<td>${course.code}</td>
-												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<th>Code</th>
+												<th>Name</th>
+												<th>Unit</th>
+												<th>Coordinator</th>
 											</tr>
-										</c:forEach>
-									</table>
+											<c:forEach items="${semester.value}" var="course">
+												<tr>
+													<td>${course.code}</td>
+													<td>${course.name}</td>
+													<td>${course.units}</td>
+													<td>${course.coordinator}</td>
+												</tr>
+											</c:forEach>
+										</table>
 									</div>
 								</c:when>
 								<c:when test="${semester.key<7}">
 									<div class="y3">
-									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
-									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
-									<table
-										class="table table-striped table-hover table-bordered table-condensed">
-										<tr>
-											<th>Code</th>
-											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
-										</tr>
-										<c:forEach items="${semester.value}" var="course">
+										<c:if test="${semester.key % 2 == 0}">
+											<b>Spring</b>
+										</c:if>
+										<c:if test="${semester.key % 2 != 0}">
+											<b>Fall</b>
+										</c:if>
+										<table
+											class="table table-striped table-hover table-bordered table-condensed">
 											<tr>
-												<td>${course.code}</td>
-												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<th>Code</th>
+												<th>Name</th>
+												<th>Unit</th>
+												<th>Coordinator</th>
 											</tr>
-										</c:forEach>
-									</table>
+											<c:forEach items="${semester.value}" var="course">
+												<tr>
+													<td>${course.code}</td>
+													<td>${course.name}</td>
+													<td>${course.units}</td>
+													<td>${course.coordinator}</td>
+												</tr>
+											</c:forEach>
+										</table>
 									</div>
 								</c:when>
 								<c:when test="${semester.key<9}">
 									<div class="y4">
-									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
-									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
-									<table
-										class="table table-striped table-hover table-bordered table-condensed">
-										<tr>
-											<th>Code</th>
-											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
-										</tr>
-										<c:forEach items="${semester.value}" var="course">
+										<c:if test="${semester.key % 2 == 0}">
+											<b>Spring</b>
+										</c:if>
+										<c:if test="${semester.key % 2 != 0}">
+											<b>Fall</b>
+										</c:if>
+										<table
+											class="table table-striped table-hover table-bordered table-condensed">
 											<tr>
-												<td>${course.code}</td>
-												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<th>Code</th>
+												<th>Name</th>
+												<th>Unit</th>
+												<th>Coordinator</th>
 											</tr>
-										</c:forEach>
-									</table>
+											<c:forEach items="${semester.value}" var="course">
+												<tr>
+													<td>${course.code}</td>
+													<td>${course.name}</td>
+													<td>${course.units}</td>
+													<td>${course.coordinator}</td>
+												</tr>
+											</c:forEach>
+										</table>
 									</div>
 								</c:when>
 								<c:otherwise>
 									<div class="y5">
-									<c:if test="${semester.key % 2 == 0}"><b>Spring</b></c:if>
-									<c:if test="${semester.key % 2 != 0}"><b>Fall</b></c:if>
-									<table
-										class="table table-striped table-hover table-bordered table-condensed">
-										<tr>
-											<th>Code</th>
-											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
-										</tr>
-										<c:forEach items="${semester.value}" var="course">
+										<c:if test="${semester.key % 2 == 0}">
+											<b>Spring</b>
+										</c:if>
+										<c:if test="${semester.key % 2 != 0}">
+											<b>Fall</b>
+										</c:if>
+										<table
+											class="table table-striped table-hover table-bordered table-condensed">
 											<tr>
-												<td>${course.code}</td>
-												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<th>Code</th>
+												<th>Name</th>
+												<th>Unit</th>
+												<th>Coordinator</th>
 											</tr>
-										</c:forEach>
-									</table>
+											<c:forEach items="${semester.value}" var="course">
+												<tr>
+													<td>${course.code}</td>
+													<td>${course.name}</td>
+													<td>${course.units}</td>
+													<td>${course.coordinator}</td>
+												</tr>
+											</c:forEach>
+										</table>
 									</div>
 								</c:otherwise>
 							</c:choose>
@@ -264,7 +291,11 @@
 				</div>
 			</div>
 		</div>
+
+
 	</div>
+
+
 
 	<div class="footer">&copy; Kristen Marenco, Luis Gonzales, Franky
 		Gudino, Roi Chico 2017. All Rights Reserved.</div>

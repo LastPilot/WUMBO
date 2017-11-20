@@ -62,12 +62,16 @@
 				<!-- Logout Button -->
 				<div class="logout" class="profile-userbuttons">
 					<form action="Logout" method="post">
-						<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
+						<input class="btn btn-link" type="submit" value="Logout" />
 					</form>
 
 				</div>
 			</div>
 		</nav>
+		
+		</div>
+		
+		<div class = "main-content">
 
 		<!-- Profile Picture -->
 		<div class="container">
@@ -185,6 +189,9 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
 	<div class="footer">&copy; Kristen Marenco, Luis Gonzales, Franky
 		Gudino, Roi Chico 2017. All Rights Reserved.</div>
 </body>

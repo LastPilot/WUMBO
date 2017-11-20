@@ -80,7 +80,7 @@ div.logout {
 }
 
 div.profile-sidebar {
-	background-color: WHITE;
+	background-color: #f4f4f4;
 	text-align: center;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -91,8 +91,17 @@ img.profile {
 	height: 150px;
 }
 
+div.col-md-3{
+	background-color: #f4f4f4;
+}
+
+div.between-cols {
+	background-color: white;
+	
+}
+
 div.col-md-9 {
-	background-color: WHITE;
+	background-color: white;
 	text-align: center;
 }
 
@@ -123,6 +132,10 @@ hr {
 
 form.Home {
 	Float: Left;
+}
+
+.main-content{
+	background-color: white;
 }
 
 div.footer {

@@ -156,5 +156,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="footer">&copy; Kristen Marenco, Luis Gonzales, Franky
+		Gudino, Roi Chico 2017. All Rights Reserved.</div>
 </body>
 </html>

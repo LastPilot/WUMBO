@@ -1,8 +1,9 @@
 body, html{
-     height: 100%;
- 	background-repeat: no-repeat;
- 	/*background-color: #d3d3d3;*/
- 	background-color: gold;
+    height: 100%;
+ 	/*background-repeat: no-repeat;
+ 	background-color: #d3d3d3;
+ 	background-color: gold;*/
+ 	background-color: #f4f4f4;
  	font-family: 'Oxygen', sans-serif;
 }
 
@@ -43,8 +44,10 @@ input::-webkit-input-placeholder {
     padding-top: 3px;
 }
 
+
+
 .main-login{
- 	background-color: #fff;
+ 	background-color: white;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -70,4 +73,17 @@ input::-webkit-input-placeholder {
 .login-register{
 	font-size: 11px;
 	text-align: center;
+}
+
+.footer {
+	background-color: black;
+	color: grey;
+	padding: 10px;
+	text-align: center;
+	
+position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
 }

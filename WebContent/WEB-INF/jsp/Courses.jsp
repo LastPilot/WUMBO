@@ -56,7 +56,7 @@
 
 			<div class="logout" class="profile-userbuttons" align="Right">
 				<form action="Logout" method="post">
-					<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
+					<input class="btn btn-link " type="submit" value="Logout" />
 				</form>
 			</div>
 		</div>
