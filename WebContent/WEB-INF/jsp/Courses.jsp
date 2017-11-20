@@ -10,8 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css ">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css ">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,14 +21,11 @@
 <link rel="stylesheet" href="<c:url value="/css/courses.css"/>" />
 
 <!-- Website Font style -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 <!-- Google Fonts -->
-<link href='https://fonts.googleapis.com/css?family=Passion+One'
-	rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Oxygen'
-	rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
 <title>${user.name}'s Courses</title>
 </head>
@@ -60,7 +56,7 @@
 
 			<div class="logout" class="profile-userbuttons" align="Right">
 				<form action="Logout" method="post">
-					<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
+					<input class="btn btn-link " type="submit" value="Logout" />
 				</form>
 			</div>
 		</div>

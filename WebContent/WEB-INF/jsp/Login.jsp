@@ -32,13 +32,17 @@
 		<div class="row main">
 			<div class="panel-heading">
 				<div class="panel-title text-center">
-					<h1 class="title">
-						<b>W</b>eb-<b>U</b>ser <b>M</b>ajor-<b>B</b>ound <b>O</b>rganizer
-					</h1>
-					<hr />
+				<!-- Top Right Logo -->
+		<div class = "header">		
+	
+		<h1 class="title" style="display: inline-block; postion: center;">
+			<b>W</b>eb-<b>U</b>ser <b>M</b>ajor-<b>B</b>ound <b>O</b>rganizer
+		</h1>
+		<br>
+		</div>
 				</div>
 			</div>
-			<div class="main-login main-center">
+			<div class="main-login main-center" >
 				<h3>Login</h3>
 				<form class="form-horizontal" method="post" action="Login">
 
@@ -84,5 +88,8 @@
 			</div>
 		</div>
 	</div>
+	<div class="footer">&copy; Kristen Marenco, Luis Gonzales, Franky
+		Gudino, Roi Chico 2017. All Rights Reserved.</div>
+	
 </body>
 </html>

@@ -18,7 +18,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="shortcut icon" href="<c:url value="/img/wumbo-icon.png"/>" />
-<title>${user.name}'s Home</title>
+<title>${user.name}'sHome</title>
 </head>
 <body>
 
@@ -51,12 +51,17 @@
 				<!-- Logout Button -->
 				<div class="logout" class="profile-userbuttons">
 					<form action="Logout" method="post">
-						<input class="btn btn-danger btn-sm" type="submit" value="Logout" />
+						<input class="btn btn-link" type="submit" value="Logout" />
 					</form>
+
+
 
 				</div>
 			</div>
 		</nav>
+	</div>
+
+	<div class="main-content">
 
 		<!-- Profile Picture -->
 		<div class="container">
@@ -104,6 +109,8 @@
 
 					</div>
 				</div>
+
+				<div class="between-cols"></div>
 
 				<!-- Courses Students want to take -->
 				<!-- First Year -->
@@ -254,7 +261,11 @@
 				</div>
 			</div>
 		</div>
+
+
 	</div>
+
+
 
 	<div class="footer">&copy; Kristen Marenco, Luis Gonzales, Franky
 		Gudino, Roi Chico 2017. All Rights Reserved.</div>
