@@ -7,7 +7,7 @@ public class Course {
 	String coordinator; 
 	Boolean available;
 	String semester;
-	String prerequisites;
+	String prerequisites = "";
 	Float year;
 	
 	public Course(String code, String name, float units, String coordinator, Boolean available, String semester, String prerequisites, Float year){

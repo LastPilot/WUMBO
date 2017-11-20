@@ -15,15 +15,25 @@ $(function() {
 		$("#courseInfoDisplay").show();
 	});
 	
+	// display hidden form and show values from row
 	$(".alink").click(function() {
 		$(".center").show();
 		var code = $(this).html();
 		var coord = $("." + code).html();
+		var radio = $("." + code).parent().find("td:eq(4)").html();
+		console.log(radio == "Spring, Fall");
 		$("input[name='coordinator']").val(coord);
 		$("#hidden").val(code);
-		
+		if (radio == "Spring, Fall") {
+			$("input[value='Spring, Fall']").prop("checked", true);
+		} else if (radio == "Spring") {
+			$("input[value='Spring']").prop("checked", true);
+		} else {
+			$("input[value='Fall']").prop("checked", true);
+		}
 	});
 	
+	// hide form
 	$("#cancel").click(function() {
 		$(".center").hide();
 	});

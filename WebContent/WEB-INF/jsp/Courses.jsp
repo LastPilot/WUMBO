@@ -77,7 +77,6 @@
 				<th>Name</th>
 				<th>Units</th>
 				<th>Coordinator</th>
-				<th>Available</th>
 				<th>Semester</th>
 				<th>Prerequisites</th>
 			</tr>
@@ -88,14 +87,6 @@
 					<td>${course.name}</td>
 					<td>${course.units}</td>
 					<td>${course.coordinator}</td>
-					<td><c:choose>
-							<c:when test="${course.available}">
-								<span class="glyphicon glyphicon-ok" style="color: #00A41E;"></span>
-							</c:when>
-							<c:otherwise>
-								<span class="glyphicon glyphicon-remove" style="color: #FF0004;"></span>
-							</c:otherwise>
-						</c:choose></td>
 					<td>${course.semester}</td>
 					<td>${course.prerequisites}</td>
 				</tr>

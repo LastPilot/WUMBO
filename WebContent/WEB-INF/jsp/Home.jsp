@@ -152,15 +152,13 @@
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
+											<th>Taken</th>
 										</tr>
 										<c:forEach items="${semester.value}" var="course">
 											<tr>
 												<td>${course.code}</td>
 												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<td>${course.semester}</td>
 											</tr>
 										</c:forEach>
 									</table>
@@ -175,15 +173,13 @@
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
+											<th>Taken</th>
 										</tr>
 										<c:forEach items="${semester.value}" var="course">
 											<tr>
 												<td>${course.code}</td>
 												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<td>${course.semester}</td>
 											</tr>
 										</c:forEach>
 									</table>
@@ -198,15 +194,13 @@
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
+											<th>Taken</th>
 										</tr>
 										<c:forEach items="${semester.value}" var="course">
 											<tr>
 												<td>${course.code}</td>
 												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<td>${course.semester}</td>
 											</tr>
 										</c:forEach>
 									</table>
@@ -221,15 +215,13 @@
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
+											<th>Taken</th>
 										</tr>
 										<c:forEach items="${semester.value}" var="course">
 											<tr>
 												<td>${course.code}</td>
 												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<td>${course.semester}</td>
 											</tr>
 										</c:forEach>
 									</table>
@@ -244,15 +236,13 @@
 										<tr>
 											<th>Code</th>
 											<th>Name</th>
-											<th>Unit</th>
-											<th>Coordinator</th>
+											<th>Taken</th>
 										</tr>
 										<c:forEach items="${semester.value}" var="course">
 											<tr>
 												<td>${course.code}</td>
 												<td>${course.name}</td>
-												<td>${course.units}</td>
-												<td>${course.coordinator}</td>
+												<td>${course.semester}</td>
 											</tr>
 										</c:forEach>
 									</table>

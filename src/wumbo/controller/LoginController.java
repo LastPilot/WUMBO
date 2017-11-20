@@ -74,7 +74,8 @@ public class LoginController extends HttpServlet {
 			}
 
 			// verify login for administrator
-			String admin = "select * from persons p inner join cins c on p.cin = c.cin where p.username = ? and password = ? and p.is_admin = 1";
+			String admin = "select * from persons p inner join cins c on p.cin = c.cin where p.username = ?"
+					+ " and password = ? and p.is_admin = 1";
 			PreparedStatement p2 = c.prepareStatement(admin);
 			p2.setString(1, user);
 			p2.setString(2, pass);

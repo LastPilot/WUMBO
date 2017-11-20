@@ -26,10 +26,15 @@
 				<form action="AdminCourse" method="Post">
 				Change the coordinator for the course:<br>	
 				<input	type='text' name='coordinator' ><hr>
-				<label for="available">Open class?</label>
-				<input type="checkbox" name="a" id="available" /><hr>
+				<label for="sem">Fall</label>
+				<input type="radio" name="sem" value="Fall" /><br>
+				<label for="sem">Spring</label>
+				<input type="radio" name="sem" value="Spring" /><br>
+				<label for="sem">Fall and Spring</label>
+				<input type="radio" name="sem" value="Spring, Fall" /><hr>
 				<input type="hidden" name="hidden" id="hidden">
-				<input type="submit" name="submit" value="Submit"  id="submit" class="btn btn-primary btn-sm" />
+				<input type="submit" name="submit" value="Submit"  id="submit" class="btn btn-primary btn-sm"
+				style="width: 100%; font-size: 1.25em" />
 				<hr> <a class="alink" id="cancel">Cancel</a>
 				</form>
 			</div>			
@@ -130,7 +135,6 @@
 											<th>Name</th>
 											<th>Units</th>
 											<th>Coordinator</th>
-											<th>Available</th>
 											<th>Semester</th>
 											<th>Prerequisites</th>
 										</tr>
@@ -141,16 +145,6 @@
 											<td>${course.name}</td>
 											<td>${course.units}</td>
 											<td class="${course.code}">${course.coordinator}</td>
-											<td><c:choose>
-													<c:when test="${course.available}">
-														<span class="glyphicon glyphicon-ok"
-															style="color: #00A41E;"></span>
-													</c:when>
-													<c:otherwise>
-														<span class="glyphicon glyphicon-remove"
-															style="color: #FF0004;"></span>
-													</c:otherwise>
-												</c:choose></td>
 											<td>${course.semester}</td>
 											<td>${course.prerequisites}</td>
 										</tr>

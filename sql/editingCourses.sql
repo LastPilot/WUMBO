@@ -45,7 +45,7 @@ insert into courses values ('CS3034', 'Widely-Used Programming Languages', 3, 'R
 
 insert into courses values ('CS3035', 'Programming Language Paradigms', 3, 'Russ Abbott', false, 'Spring, Fall', 'CS2013', 3);
 
-insert into courses values ('CS3112', 'Analysis of Algorithms', 3, 'Behzad Parviz', 1, 'Spring, Fall', 'CS2013', 3);
+insert into courses values ('CS3112', 'Analysis of Algorithms', 3, 'Behzad Parviz', 1, 'Spring, Fall', 'CS2148', 3);
 
 insert into courses values ('CS3186', 'Introduction to Automata Theory', 3, 'Vladimir Akis', 1, 'Spring, Fall', 'CS2013', 3.5);
 
@@ -127,12 +127,12 @@ insert into courses values('PHYS2200', 'General Physics II: Electromagnetism and
 
 insert into courses values('GE', 'GE Course', 3, 'Other', 1, 'Spring, Fall', ' ', 1);
 
-insert into courses values ('CSElective1', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 3.5);
-insert into courses values ('CSElective2', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
-insert into courses values ('CSElective3', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
-insert into courses values ('CSElective4', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
-insert into courses values ('CSElective5', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
-insert into courses values ('CSElective6', 'CS Elective Student Choice', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
+insert into courses values ('CSElective1', 'CS Elective Student Choice 1', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 3.5);
+insert into courses values ('CSElective2', 'CS Elective Student Choice 2', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
+insert into courses values ('CSElective3', 'CS Elective Student Choice 3', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
+insert into courses values ('CSElective4', 'CS Elective Student Choice 4', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4);
+insert into courses values ('CSElective5', 'CS Elective Student Choice 5', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
+insert into courses values ('CSElective6', 'CS Elective Student Choice 6', 3, 'Computer Science Department', 1, 'Spring, Fall', 'CS2013', 4.5);
 
 update courses
 set 
