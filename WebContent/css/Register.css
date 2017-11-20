@@ -87,3 +87,14 @@ position:fixed;
    height:30px;
    width:100%;
 }
+
+.footer-diff{
+	background-color: black;
+	color: grey;
+	padding: 10px;
+	text-align: center;
+	left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+}
